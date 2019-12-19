@@ -1,0 +1,9 @@
+<div>
+    <label>Current Year: </label>
+    <mat-form-field>
+        <mat-select [(ngModel)]='graphLabel' (ngModelChange)="onYearChange($event)">
+            <mat-option *ngFor="let graphLabel of yearOptions" [value]="graphLabel">{{graphLabel}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+<app-graph [highCharts]="highCharts"></app-graph>

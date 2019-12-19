@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light sticky-top bg-light header-shadow">
+    <a class="navbar-brand" [href]="fnzUrl" target="_blank">
+        <img class="header-logo" src="https://cognizantonline.sharepoint.com/sites/ukInsurance/FNZ/SiteAssets/Dev_Site/fnzmanagement/fnz_logo.png" alt="logo" />
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <button class="favorite-btn nav-link" mat-mini-fab [routerLink]="'dashboard'" [routerLinkActive]="'active'">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+                        </button>
+            </li>
+            <li class="nav-item">
+                <button class="favorite-btn nav-link" mat-mini-fab [routerLink]="'diary'" [routerLinkActive]="'active'">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon">camera_alt</mat-icon>
+                        </button>
+            </li>
+            <li class="nav-item">
+                <button class="favorite-btn nav-link" mat-mini-fab (click)="onContactSelection()">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon">account_circle</mat-icon>
+                        </button>
+            </li>
+        </ul>
+    </div>
+    <img class="banner" src="https://cognizantonline.sharepoint.com/sites/ukInsurance/FNZ/SiteAssets/Dev_Site/fnzmanagement/assets/Banner.jpg" alt="banner" />
+    <h1 class="title"><strong> </strong></h1>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    <a [href]="ctsUrl" target="_blank">
+        <img class="header-logo" src="https://cognizantonline.sharepoint.com/sites/ukInsurance/FNZ/SiteAssets/Dev_Site/fnzmanagement/cts_logo.png" alt="logo" />
+    </a>
+</nav>

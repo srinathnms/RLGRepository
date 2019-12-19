@@ -1,0 +1,24 @@
+<button mat-icon-button class="close-icon">
+    <mat-icon (click)="onClose()" aria-hidden="false" aria-label="close icon">close</mat-icon>
+</button>
+<h1 mat-dialog-title cdkFocusInitial class="title">Get in touch</h1>
+<div>
+    <img class="contact-header-banner" src="https://cognizantonline.sharepoint.com/sites/ukInsurance/FNZ/SiteAssets/Dev_Site/fnzmanagement/assets/contact-header-banner.jpg">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="15.5%" fxLayoutAlign="center">
+        <div *ngFor="let userProfile of userProfiles; index as i">
+            <mat-card class="card-border">
+                <img mat-card-image class="user-picture" [src]="userProfile.ProfileImageUrl" alt="https://cognizantonline.sharepoint.com/sites/ukInsurance/FNZ/SiteAssets/Development_Site/fnzmanagement/assets/user.jpg">
+                <mat-card-content class="card-content">
+                    <div>{{userProfile.Name}}</div>
+                    <div>({{userProfile.Id}})</div>
+                    <div class="designation">{{userProfile.Designation}}</div>
+                </mat-card-content>
+            </mat-card>
+            <p *ngIf="i > 0" class="vertical circle-marker"></p>
+        </div>
+        <mat-card class="card-border">
+            
+        </mat-card>
+    </div>
+    <img class="contact-header-banner" style="float: right;" src="https://cognizantonline.sharepoint.com/sites/ukInsurance/FNZ/SiteAssets/Dev_Site/fnzmanagement/assets/contact-footer-banner.jpg">
+</div>

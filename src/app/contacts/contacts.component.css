@@ -1,0 +1,81 @@
+.vertical {
+    border-left: 2px #fcc40f solid;
+    display: inline-block;
+    position: absolute;
+    height: 150px;
+    content: "";
+    top: 45%;
+}
+
+.img {
+    width: 100%;
+    margin-bottom: 18%;
+}
+
+.user-picture {
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #fcc40f;
+    position: relative;
+    min-height: 70px;
+    max-height: 70px;
+    min-width: 70px;
+    max-width: 70px;
+    margin-left: 20px;
+}
+
+.card-border {
+    min-height: 160px;
+    max-height: 160px;
+    min-width: 160px;
+    max-width: 160px;
+    margin-top: 30px;
+    box-shadow: none!important;
+}
+
+.card-content {
+    text-align: center;
+    font-size: 10px;
+}
+
+.outer-card {
+    min-height: 450px;
+    width: 40vw;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6) !important;
+}
+
+.contact-header-banner {
+    min-width: 270px;
+    max-width: 270px;
+}
+
+.mat-dialog-content {
+    display: block;
+    margin: 0 -24px;
+    padding: 0 24px;
+    max-height: 80vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.close-icon {
+    float: right;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    justify-content: center;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    font-size: 36px;
+    align-content: center;
+    line-height: 36px;
+    background: linear-gradient(90deg, #ff8f1c 0%, #c800a1 50%, #0033a0 100%);
+}
+
+.designation {
+    margin-top: 10px;
+}

@@ -1,0 +1,16 @@
+.img {
+    width: 100%;
+    margin-bottom: 18%;
+    height: 90%
+}
+
+.card-picture {
+    width: 40%;
+    margin-bottom: 1%;
+    margin-top: 10%;
+    max-width:300px;
+}
+
+.gallery{
+    flex-wrap: wrap;
+}

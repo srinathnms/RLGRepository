@@ -1,0 +1,40 @@
+<button mat-icon-button class="close-icon">
+    <mat-icon (click)="onClose()" aria-hidden="false" aria-label="close icon">close</mat-icon>
+</button>
+<h1 mat-dialog-title cdkFocusInitial class="title">{{data.header}}</h1>
+<mat-divider></mat-divider>
+<div mat-dialog-content>
+    <div *ngIf="data.content && data.content.length > 0 && !data.menuContentType">
+        <div class="tiles-container">
+            <mat-card class="tiles-card" *ngFor="let menu of data.content">
+                <mat-card-header>
+                    <mat-card-title class="title-text">{{menu?.MenuName}}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>
+                        {{menu?.Contents}}
+                    </p>
+                </mat-card-content>
+                <mat-card-footer>
+                    <img
+                        src='https://cognizantonline.sharepoint.com/:i:/r/sites/ukInsurance/FNZ/SiteAssets/LearnMore.png?csf=1&e=FEIKJE'>
+                    <p class="pageNumber" (click)="displayDocument(documentUrl)"
+                        *ngFor="let documentUrl of menu.DocumentUrls;let i = index">{{i+1}}</p>
+                </mat-card-footer>
+            </mat-card>
+        </div>
+    </div>
+    <!-- <app-document
+        *ngIf="data.content && data.menuContentType && data.menuContentType === 'Document' || data.menuContentType === 'MultipleDocuments'"
+        [data]="data"></app-document>
+    <app-team-view
+        *ngIf="data.content && data.menuContentType && data.menuContentType === 'Graph' && data.header === 'Team View'"
+        [graphData]="data.content"></app-team-view>
+    <app-revenue
+        *ngIf="data.content && data.menuContentType && data.menuContentType === 'Graph' && data.header === 'Revenue View'"
+        [graphData]="data.content"></app-revenue>
+    <app-offshore-locations *ngIf="data.menuContentType === 'Location'" [offshoreLocations]="data.content">
+    </app-offshore-locations>
+    <app-faq *ngIf="data.menuContentType === 'FAQ'" [faq]="data.content"></app-faq>
+    <app-glossary *ngIf="data.menuContentType === 'Glossary'" [glossary]="data.content"></app-glossary> -->
+</div>

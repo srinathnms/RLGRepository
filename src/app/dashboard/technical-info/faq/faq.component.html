@@ -1,0 +1,18 @@
+<div class="faq-container">
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let faq of faqList" (opened)="faq !== selectedFaq" (closed)="faq === selectedFaq" hideToggle="true">
+            <mat-expansion-panel-header class="header" (click)="onFaqSelection(faq)">
+                <mat-panel-title>
+                    <button class="favorite-btn" mat-mini-fab *ngIf="faq !== selectedFaq">
+                        <mat-icon mat-mini-fab >add</mat-icon>
+                    </button>
+                    <button class="favorite-btn" mat-mini-fab *ngIf="faq === selectedFaq">
+                        <mat-icon mat-mini-fab >remove</mat-icon>
+                    </button> {{faq.Title}}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p *ngIf="faq === selectedFaq">{{faq.Solution}}</p>
+            <a *ngIf="faq && faq.Attachments" [href]="faq && faq.AttachmentUrl">{{faq && faq.AttachmentName}}</a>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

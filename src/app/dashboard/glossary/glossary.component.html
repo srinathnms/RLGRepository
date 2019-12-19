@@ -1,0 +1,36 @@
+<!-- <div class="row glossary-header">
+    <p *ngFor="let test of sortedGlossary">
+        <a (click)="getGlossary(test.key)">{{test.key}}</a>
+    </p>
+</div> -->
+
+<mat-toolbar class="app-toolbar">
+    <mat-button-toggle-group #group="matButtonToggleGroup" *ngFor="let glossaryHeader of glossaryHeaders" [value]="currentGlossary.key" (change)="getGlossary(group.value)">
+        <mat-button-toggle [disabled]="glossaryHeader.canDisable" [value]="glossaryHeader.alphabet">{{glossaryHeader.alphabet}}</mat-button-toggle>
+    </mat-button-toggle-group>
+</mat-toolbar>
+
+<!-- <div class="toc-container">
+    <ul *ngFor="let test of currentGlossary">
+        <li [ngClass]="{'active': true}">
+            <a pageScroll [href]="'#'+test.ElementId">{{test.Terms}}</a>
+        </li>
+    </ul>
+</div> -->
+
+<!-- <div class="glossary">
+    <section *ngFor="let test of currentGlossary.glossary" [id]="test.ElementId">
+        <h1>{{test.Terms}}</h1>
+        <p>{{test.Description}}</p>
+    </section>
+</div> -->
+
+<div class="glossary-outer" fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="1.5%" fxLayoutAlign="center">
+    <mat-card class="glossary-card" *ngFor="let glossary of currentGlossary?.glossary">
+        <mat-card-content fxLayout="row">
+            <div class="terms">{{glossary.Terms}}</div>
+            <p class="vertical circle-marker"></p>
+            <div class="description">{{glossary.Description}}</div>
+        </mat-card-content>
+    </mat-card>
+</div>

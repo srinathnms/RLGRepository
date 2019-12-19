@@ -1,0 +1,50 @@
+.title {
+    flex: 1 1 auto;
+    font-family: Garamond;
+    text-align: left;
+}
+
+.header-logo {
+    max-height: 64px;
+    min-height: 64px;
+}
+
+.banner {
+    max-width: 25%;
+    min-width: 25%;
+    max-height: 90px;
+    min-height: 90px;
+    flex: 1 1 auto;
+}
+
+.sticky-top {
+    z-index: 1;
+}
+
+
+/* .mat-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+} */
+
+.header-shadow {
+    background-color: white!important;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.mat-card-avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.favorite-btn {
+    margin-right: 30px;
+    background-color: white;
+    /*Below css is added since placing matcard inside matlist shows blue line*/
+    outline: none !important;
+    outline-style: none !important;
+}

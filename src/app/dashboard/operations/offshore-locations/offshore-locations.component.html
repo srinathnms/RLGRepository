@@ -1,0 +1,8 @@
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="1.5%" fxLayoutAlign="center" class="gallery">
+    <mat-card class="card-picture" *ngFor="let offshoreLocation of offshoreLocations">
+        <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+            <span fxFlex="80%">{{offshoreLocation.FileName | fileText}}</span>
+        </mat-card-title>
+        <img style="height:150px;" mat-card-image [src]="offshoreLocation.ServerRelativeUrl">
+    </mat-card>
+</div>

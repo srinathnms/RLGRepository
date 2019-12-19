@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  SHARE_POINT_URL: 'https://cognizantonline.sharepoint.com',
+  BASE_URL: 'https://cognizantonline.sharepoint.com/sites/RLG-Repository',
+  API_URL: `https://cognizantonline.sharepoint.com/sites/RLG-Repository/_api`,
+  DOC_URL: `https://cognizantonline.sharepoint.com/sites/RLG-Repository/_layouts/15/Doc.aspx`,
+  FNZ_URL: 'https://www.royallondon.com',
+  CTS_URL: 'https://be.cognizant.com'
 };
 
 /*

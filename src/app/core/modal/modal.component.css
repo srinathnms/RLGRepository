@@ -1,0 +1,89 @@
+.title {
+    text-align: center;
+    color: #0033a0;
+    }
+    
+.close-icon {
+    float: right;
+    }
+    
+.mat-dialog-content {
+    display: block;
+    margin: 0 -24px;
+    padding: 0 24px;
+    max-height: 80vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    }
+    
+p {
+    font-family: "candara";
+    }
+    
+.tiles-card {
+    display:flex;
+    flex-direction: column;
+    min-width: 210px;
+    min-height: 210px;
+    max-width: 210px;
+    max-height: 210px;
+    margin: 10px!important;
+    border-radius:25px;
+    border: 1px solid blue;
+    box-shadow: 0 16px 26px -6px rgba(0, 0, 0, .2), 0 8px 12px 0 rgba(0, 0, 0, .14), 0 10px 5px 0 rgba(0, 0, 0, .12) !important;
+    }
+    
+mat-card-header{
+    flex-shrink: 0;
+    border-bottom: 1px solid orange;
+    }
+    
+mat-card-title{
+    font-family: "candara";
+    font-weight:bold;
+    height:30px;
+    }
+    
+mat-card-content{
+    flex-grow: 1;
+    overflow: auto;
+    margin-top: 10px;
+    }
+    
+mat-card-content::-webkit-scrollbar {
+    width: 2px;
+    background: gray;
+    }
+    
+.tiles-container{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    }
+    
+mat-card-footer{
+    margin: 4px;
+    display: inline-flex;
+    }
+    
+.pageNumber{
+    margin:2px;
+    cursor:pointer;
+    }
+    
+.pageNumber:hover{
+    transition: transform .4s;
+    transform: scale(1.8);
+    }
+    
+mat-card-footer img{
+    max-width: 12vh;
+    }
+
+.title-text{
+    font-size:15px;
+}
+    
+    

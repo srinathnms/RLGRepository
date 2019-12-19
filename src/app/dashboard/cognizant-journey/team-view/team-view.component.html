@@ -1,0 +1,13 @@
+<div>
+    <label>Current Year: </label>
+    <mat-form-field>
+        <mat-select [(ngModel)]='yearOption' (ngModelChange)="onYearChange($event)">
+            <mat-option *ngFor="let yearOption of yearOptions" [value]="yearOption">{{yearOption}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-radio-group [(ngModel)]='graphType' (ngModelChange)="onTeamViewTypeChange($event)" aria-label="Select an option">
+        <mat-radio-button *ngFor="let graphType of graphTypes" [value]="graphType">{{graphType}}</mat-radio-button>
+    </mat-radio-group>
+</div>
+
+<app-graph [highCharts]="highCharts"></app-graph>

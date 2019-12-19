@@ -1,0 +1,48 @@
+<div [@listAnimation]="dashboardMainMenus?.length" class="dashboard-content">
+    <mat-chip-list class="mat-chip-list-wrapper" *ngFor="let dashboardMenu of dashboardMainMenus">
+        <div class="tp-box" [@flipState]="dashboardMenu.Flip">
+            <mat-card class="mat-chip-menu tp-box__side tp-box__front" (click)="onMenuClick(dashboardMenu)">
+                <img mat-card-image class="img-zoom" [src]="dashboardMenu.BackgroundImage && dashboardMenu.BackgroundImage.Url" [alt]="dashboardMenu.BackgroundImage && dashboardMenu.BackgroundImage.Description">
+            </mat-card>
+            <div class="tp-box__side tp-box__back">
+                <mat-card class="mat-chip-menu" *ngIf="getSubMenus(dashboardMenu).length > 0">
+                    <img class="image-test" src="https://cognizantonline.sharepoint.com/sites/ukInsurance/FNZ/SiteAssets/Development_Site/fnzmanagement/assets/card.jpg">
+                    <span class="text-test">{{dashboardMenu.MenuName}}</span>
+                    <mat-card-content class="card-content">
+                        <mat-list @list *ngFor="let dashboardSubMenu of getSubMenus(dashboardMenu)">
+                            <div fxLayout fxLayout.xs="column" fxLayoutWrap fxLayoutGap="1.5%" fxLayoutAlign="center" class="list-content">
+                                <mat-list-item class="mat-chip-sub-menu list-text" (click)="onSubMenuClick(dashboardSubMenu)" (mouseover)="onSubMenuHover(dashboardSubMenu)">
+                                    <strong @items>{{dashboardSubMenu.MenuName}}</strong>
+                                </mat-list-item>
+                            </div>
+                        </mat-list>
+                    </mat-card-content>
+                    <button class="back-icon" (click)="toggleFlip(dashboardMenu)" mat-mini-fab>
+                        <mat-icon mat-mini-fab >arrow_back</mat-icon>
+                    </button>
+                </mat-card>
+                <mat-card class="mat-chip-menu" @list *ngIf="getSubMenus(dashboardMenu).length === 0">
+                    <mat-card-content>
+                        <mat-list role="list" *ngIf="getSubMenus(dashboardMenu).length === 0">
+                            <mat-list-item class="mat-chip-sub-menu" role="listitem">
+                                <strong @items>No list has been added</strong>
+                            </mat-list-item>
+                        </mat-list>
+                    </mat-card-content>
+                    <button class="back-icon" (click)="toggleFlip(dashboardMenu)" mat-mini-fab>
+                        <mat-icon mat-mini-fab >arrow_back</mat-icon>
+                    </button>
+                </mat-card>
+            </div>
+        </div>
+    </mat-chip-list>
+    <mat-chip class="mat-chip-add-menu border-test mat-chip-list-wrapper" (click)="onMenuAdd()">
+        <mat-icon aria-hidden="false" aria-label="add icon">add</mat-icon>
+    </mat-chip>
+    <div class="form-group">
+        <label for="file">Choose File</label>
+        <input type="file"
+               id="file"
+               (change)="handleFileInput($event.target.files)">
+    </div>
+</div>

@@ -1,0 +1,49 @@
+.mat-expansion-panel {
+    margin-bottom: 15px;
+    background: #efefef;
+}
+
+.mat-accordion>.mat-expansion-panel-spacing:first-child,
+.mat-accordion>:first-child:not(.mat-expansion-panel) .mat-expansion-panel-spacing {
+    margin-bottom: 15px;
+}
+
+.faq-container {
+    margin-top: 30px;
+}
+
+.mat-card-avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+    background: white;
+}
+
+.favorite-btn {
+    margin-right: 30px;
+    background-color: #0033a0;
+    /*Below css is added since placing matcard inside matlist shows blue line*/
+    outline: none !important;
+    outline-style: none !important;
+}
+
+.mat-mini-fab {
+    box-shadow: none;
+    color: white;
+}
+
+.mat-expansion-panel-header-title {
+    display: flex;
+    flex-grow: 1;
+    margin-right: 16px;
+    align-items: center;
+}
+
+.mat-expansion-panel-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 10px;
+}

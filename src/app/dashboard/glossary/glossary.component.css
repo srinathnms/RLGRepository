@@ -1,0 +1,82 @@
+/* .toc-container {
+    width: 18%;
+    position: fixed;
+    top: 110px;
+    right: 0;
+    bottom: 12px;
+    overflow-y: auto;
+    overflow-x: hidden;
+} */
+
+.glossary-header {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    left: 14%;
+    margin-top: 10px;
+}
+
+.glossary-outer {
+    align-items: center!important;
+}
+
+.glossary-card {
+    max-width: 60rem;
+    min-width: 60rem;
+    margin-top: 50px;
+    margin: 5px;
+    color: white;
+    background-color: #0033a0;
+}
+
+.vertical {
+    border-left: 1px #00b140 solid !important;
+    display: inline-block;
+    height: 80px;
+    align-items: center;
+    display: flex;
+}
+
+.terms {
+    max-width: 200px;
+    min-width: 200px;
+    margin: 10px;
+    font-weight: bolder;
+    align-items: center;
+    display: flex;
+}
+
+.description {
+    margin: 10px;
+    align-items: center;
+    display: flex;
+}
+
+.test {
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border-radius: 2px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.mat-button-toggle-checked {
+    background-color: #0033a0;
+    color: white;
+}
+
+.app-toolbar {
+    position: sticky;
+    justify-content: center;
+    position: -webkit-sticky;
+    /* For macOS/iOS Safari */
+    top: 0;
+    /* Sets the sticky toolbar to be on top */
+    z-index: 1000;
+    /* Ensure that your app's content doesn't overlap the toolbar */
+}
