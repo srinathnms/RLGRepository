@@ -14,12 +14,21 @@ export class AuthService {
   public currentUserSubject: BehaviorSubject<IUserClaims>;
   public currentUser: Observable<IUserClaims>;
   constructor(private http: HttpClient) {
+    this.getUserContext1();
     this.currentUserSubject = new BehaviorSubject<IUserClaims>(JSON.parse(localStorage.getItem('currentUser')));
     this.currentUser = this.currentUserSubject.asObservable();
   }
 
   public get currentUserValue(): IUserClaims {
     return this.currentUserSubject.value;
+  }
+
+  async getUserContext1(): Promise<IUserClaims> {
+    const userClaims = await this.getUserContext().toPromise();
+    if (userClaims) {
+      localStorage.setItem('currentUser', userClaims.FormDigestValue);
+    }
+    return userClaims;
   }
 
   private handleError(error: HttpErrorResponse) {
@@ -42,7 +51,9 @@ export class AuthService {
     };
 
     return this.http.post(environment.API_URL + '/contextinfo', options).pipe(
-      map((data: IUserClaims) => data),
+      map((data: IUserClaims) => {
+        return data;
+      }),
       retry(3),
       catchError(this.handleError)
     );
